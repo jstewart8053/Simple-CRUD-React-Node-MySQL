@@ -45,7 +45,7 @@ function App() {
       (response) => {
         setEmployeeList(
           employeeList.map((val) => {
-            return val.id == id
+            return val.id === id
               ? {
                   id: val.id,
                   name: val.name,
@@ -65,7 +65,7 @@ function App() {
     Axios.delete(`http://localhost:3001/delete/${id}`).then((response) => {
       setEmployeeList(
         employeeList.filter((val) => {
-          return val.id != id;
+          return val.id !== id;
         })
       );
     });
